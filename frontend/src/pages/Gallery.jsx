@@ -9,7 +9,7 @@ function Gallery() {
   useEffect(() => {
     const fetchArtworks = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/artworks");
+        const res = await axios.get("https://art-gallery-portfolio-634e.vercel.app/api/artworks");
         setArtworks(res.data);
       } catch (error) {
         console.log(error);

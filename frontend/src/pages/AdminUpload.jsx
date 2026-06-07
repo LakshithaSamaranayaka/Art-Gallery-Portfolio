@@ -22,7 +22,7 @@ function AdminUpload() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/artworks", formData);
+      await axios.post("https://art-gallery-portfolio-634e.vercel.app/api/artworks", formData);
       alert("Artwork uploaded successfully");
 
       setFormData({

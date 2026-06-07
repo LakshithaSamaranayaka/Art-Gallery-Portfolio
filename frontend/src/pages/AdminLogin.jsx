@@ -21,7 +21,7 @@ function AdminLogin() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/admin/login", formData);
+      const res = await axios.post("https://art-gallery-portfolio-634e.vercel.app/api/admin/login", formData);
 
       localStorage.setItem("adminToken", res.data.token);
 
