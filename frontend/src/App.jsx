@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import AdminUpload from "./pages/AdminUpload";
 import AdminLogin from "./pages/AdminLogin";
 import ArtworkDetails from "./pages/ArtworkDetails";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -19,7 +20,11 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/admin-upload" element={<AdminUpload />} />
+        <Route path="/admin-upload" element={
+          <ProtectedRoute>
+            <AdminUpload />
+          </ProtectedRoute>
+        } />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/artwork/:id" element={<ArtworkDetails />} />
       </Routes>
