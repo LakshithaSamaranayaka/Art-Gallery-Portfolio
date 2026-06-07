@@ -26,34 +26,41 @@ function AdminUpload() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const token = localStorage.getItem("adminToken");
+  const token = localStorage.getItem("adminToken");
 
-       await axios.post(
-           "https://art-gallery-portfolio-634e.vercel.app/api/artworks",
-  formData,
-  {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
+  if (!token) {
+    alert("Please login first");
+    navigate("/admin-login");
+    return;
   }
-);
-      alert("Artwork uploaded successfully");
 
-      setFormData({
-        title: "",
-        category: "Portrait",
-        imageUrl: "",
-        description: "",
-        year: "2026",
-        medium: "Pencil Drawing",
-      });
-    } catch (error) {
-      alert("Failed to upload artwork");
-    }
-  };
+  try {
+    await axios.post("https://art-gallery-portfolio-634e.vercel.app/api/artworks",
+      formData,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    alert("Artwork uploaded successfully");
+
+    setFormData({
+      title: "",
+      category: "Portrait",
+      imageUrl: "",
+      description: "",
+      year: "2026",
+      medium: "Pencil Drawing",
+    });
+  } catch (error) {
+    console.log("Upload error:", error.response?.data || error.message);
+    alert(error.response?.data?.message || "Failed to upload artwork");
+  }
+};
 
   return (
     <main className="pt-32 min-h-screen">
