@@ -1,7 +1,14 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function AdminUpload() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("adminToken");
+    navigate("/admin-login");
+  }
   const [formData, setFormData] = useState({
     title: "",
     category: "Portrait",
@@ -22,7 +29,17 @@ function AdminUpload() {
     e.preventDefault();
 
     try {
-      await axios.post("https://art-gallery-portfolio-634e.vercel.app/api/artworks", formData);
+      const token = localStorage.getItem("adminToken");
+
+       await axios.post(
+           "https://art-gallery-portfolio-634e.vercel.app/api/artworks",
+  formData,
+  {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+);
       alert("Artwork uploaded successfully");
 
       setFormData({
@@ -41,6 +58,12 @@ function AdminUpload() {
   return (
     <main className="pt-32 min-h-screen">
       <section className="max-w-3xl mx-auto px-6">
+        <button
+      onClick={handleLogout}
+      className="mb-6 border border-gold text-gold px-5 py-2 rounded-full hover:bg-gold hover:text-black transition"
+    >
+      Logout
+    </button>
         <div className="glass-card rounded-[3rem] p-10">
           <h1 className="text-4xl font-display text-gold">Upload Artwork</h1>
 
@@ -99,7 +122,7 @@ function AdminUpload() {
         </div>
       </section>
     </main>
-  );
+    );  
 }
 
 export default AdminUpload;

@@ -1,5 +1,6 @@
 const express = require("express");
 const Artwork = require("../models/Artwork");
+const protectAdmin = require("../middleware/authMiddleware");
 
 const router = express.Router();
 
@@ -29,7 +30,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // Create artwork
-router.post("/", async (req, res) => {
+router.post("/", protectAdmin, async (req, res) => {
   try {
     const artwork = await Artwork.create(req.body);
     res.status(201).json(artwork);
