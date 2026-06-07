@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #090604;
+  color: #f3ead7;
+}
+
+.wood-bg {
+  background:
+    linear-gradient(rgba(9, 6, 4, 0.9), rgba(9, 6, 4, 0.95)),
+    radial-gradient(circle at top, #4b2a18, #090604 70%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(214, 168, 91, 0.25);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
