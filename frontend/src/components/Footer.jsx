@@ -1,4 +1,3 @@
-import { Camera, ExternalLink, Link as LinkIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -50,38 +49,48 @@ function Footer() {
             </h3>
 
             <p className="text-cream/60 mb-5">
-              Follow my artwork journey and contact me for custom pencil drawings.
+              Follow my artwork journey and Follow me through social media.
             </p>
 
-            <div className="flex gap-4 flex-wrap">
-              <a
-                href="https://www.instagram.com/lakshitha_samaranayaka"
-                target="_blank"
-                rel="noreferrer"
-                className="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition"
-              >
-                <Camera size={20} />
-              </a>
+            <div className="flex gap-4">
+  <a
+    href="https://www.instagram.com/jeff_lakshitha_?igsh=aDdzZG9jbnlmc29r&utm_source=qr"
+    target="_blank"
+    rel="noreferrer"
+      className="w-14 h-14  flex items-center justify-center hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]"  >
+    <img
+      src="/icons/instagramlogo.png"
+      alt="Instagram"
+      className="w-9 h-9 object-contain"
+    />
+  </a>
 
-              <a
-                href="https://www.facebook.com/lakshitha.samaranayaka"
-                target="_blank"
-                rel="noreferrer"
-                className="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition"
-              >
-                <ExternalLink size={20} />
-              </a>
+  <a
+    href="https://www.facebook.com/share/1E8KBW1rdF/?mibextid=wwXIfr"
+    target="_blank"
+    rel="noreferrer"
+      className="w-14 h-14  flex items-center justify-center hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]"  >
 
-              <a
-                href="https://www.threads.net/@lakshitha_samaranayaka"
-                target="_blank"
-                rel="noreferrer"
-                className="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition"
-              >
-                <LinkIcon size={20} />
-              </a>
+    <img
+      src="/icons/fblogo.png"
+      alt="Facebook"
+      className="w-12 h-12 object-contain"
+    />
+  </a>
 
-              
+  <a
+    href="https://www.threads.com/@jeff_lakshitha_?igshid=NTc4MTIwNjQ2YQ=="
+    target="_blank"
+    rel="noreferrer"
+      className="w-14 h-14  flex items-center justify-center hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]"  >
+  
+    <img
+      src="/icons/thlogo.png"
+      alt="Threads"
+      className="w-11 h-11 object-contain"
+    />
+  </a>
+        
             </div>
           </div>
         </div>

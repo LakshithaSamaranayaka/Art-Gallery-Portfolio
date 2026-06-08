@@ -117,9 +117,9 @@ function Home() {
           </div>
 
           <div className="glass-card p-8 rounded-3xl">
-            <h3 className="text-2xl font-display text-gold">Custom Orders</h3>
+            <h3 className="text-2xl font-display text-gold">Graphite Collection</h3>
             <p className="text-cream/70 mt-3">
-              Personal portraits, gift artworks, and premium framed art displays.
+              A curated selection of realistic portraits, cinematic sketches, and emotional pencil artworks.
             </p>
           </div>
         </div>
