@@ -6,11 +6,13 @@ function ArtworkCard({ artwork }) {
       to={`/artwork/${artwork._id}`}
       className="glass-card rounded-3xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-2xl block"
     >
-      <img
-        src={artwork.imageUrl}
-        alt={artwork.title}
-        className="w-full h-96 object-contain bg-black"
-      />
+      <div className="w-full h-[420px] overflow-hidden">
+        <img
+          src={artwork.imageUrl}
+          alt={artwork.title}
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
 
       <div className="p-6">
         <p className="text-gold text-xs uppercase tracking-[0.3em]">
