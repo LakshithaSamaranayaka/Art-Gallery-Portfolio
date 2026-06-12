@@ -34,7 +34,7 @@ function Navbar() {
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="w-full px-10 py-4 grid grid-cols-3 items-center">
+      <div className="w-full px-6 md:px-10 py-4 grid grid-cols-2 md:grid-cols-3 items-center">
         {/* Left Logo */}
         <Link
           to="/"

@@ -1,3 +1,5 @@
+import aboutImage from "../assets/about.jpg";
+
 function About() {
   return (
     <main className="pt-32 min-h-screen bg-[#090604]">
@@ -28,6 +30,20 @@ function About() {
             <p className="text-gold uppercase tracking-[0.35em] text-sm mb-4">
               The Artist
             </p>
+            {/* Mobile Only Profile Image */}
+<div className="md:hidden mt-8 mb-10 flex flex-col items-center">
+  <div className="rounded-[2rem] p-3 border border-gold/20 bg-black/30 w-full max-w-[420px]">
+    <img
+      src={aboutImage}
+      alt="Lakshitha Samaranayaka"
+      className="w-full h-[360px] object-cover object-[center_35%] rounded-[1.5rem]"
+    />
+  </div>
+
+  <h2 className="mt-1 text-3xl font-display text-cream leading-tight text-center">
+    " Lakshitha  Samaranayaka "
+  </h2>
+</div>
 
             <h2 className="text-4xl md:text-5xl font-display leading-tight">
               I turn silence, shadow, and emotion into pencil art.
