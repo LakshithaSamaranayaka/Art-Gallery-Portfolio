@@ -1,4 +1,4 @@
-import aboutImage from "../assets/about.jpg";
+import Image from "../assets/aboutpage.jpg";
 
 function About() {
   return (
@@ -30,20 +30,27 @@ function About() {
             <p className="text-gold uppercase tracking-[0.35em] text-sm mb-4">
               The Artist
             </p>
+          <div className="mt-6 mb-8 rounded-[2rem] p-3 border border-gold/20 bg-black/30">
+            <img
+              src={Image}
+              alt="Lakshitha Samaranayaka"
+              className="w-full h-[400px] object-cover object-[center_35%] rounded-[1.5rem]"
+            />
+          </div>
             {/* Mobile Only Profile Image */}
-<div className="md:hidden mt-8 mb-10 flex flex-col items-center">
-  <div className="rounded-[2rem] p-3 border border-gold/20 bg-black/30 w-full max-w-[420px]">
-    <img
-      src={aboutImage}
-      alt="Lakshitha Samaranayaka"
-      className="w-full h-[360px] object-cover object-[center_35%] rounded-[1.5rem]"
-    />
-  </div>
+      <div className="md:hidden mt-8 mb-10 flex flex-col items-center">
+        <div className="rounded-[2rem] p-3 border border-gold/20 bg-black/30 w-full max-w-[420px]">
+           <img
+            src={Image}
+            alt="Lakshitha Samaranayaka"
+            className="w-full h-[360px] object-cover object-[center_35%] rounded-[1.5rem]"
+       />
+     </div>
 
   <h2 className="mt-1 text-3xl font-display text-cream leading-tight text-center">
     " Lakshitha  Samaranayaka "
-  </h2>
-</div>
+    </h2>
+     </div>
 
             <h2 className="text-4xl md:text-5xl font-display leading-tight">
               I turn silence, shadow, and emotion into pencil art.
@@ -69,8 +76,10 @@ function About() {
                 Realistic Detail
               </h3>
               <p className="text-cream/70 mt-3 leading-7">
-                Every artwork is shaped with careful shading, facial expression,
-                contrast, and graphite texture to create a realistic final piece.
+                Every artwork is created with careful observation and layered graphite
+                techniques. I focus on facial structure, eye expression, hair texture, light,
+                shadow, and contrast to bring realism into each portrait. My goal is to make
+                the viewer feel that the subject has emotion, depth, and life beyond the paper.
               </p>
             </div>
 
@@ -79,8 +88,10 @@ function About() {
                 Cinematic Emotion
               </h3>
               <p className="text-cream/70 mt-3 leading-7">
-                Many artworks are inspired by film scenes and characters because
-                cinema carries emotion, drama, memory, and storytelling.
+               Cinema inspires many of my drawings because films carry powerful emotions,
+               unforgettable characters, and meaningful moments. I try to capture the silence,
+               tension, sadness, strength, or mystery behind a scene, not just the physical
+               appearance of the character. Each sketch becomes a still frame with feeling
               </p>
             </div>
 
@@ -89,8 +100,10 @@ function About() {
                 Personal Meaning
               </h3>
               <p className="text-cream/70 mt-3 leading-7">
-                A portrait can become more than a picture. It can become a gift,
-                a memory, a tribute, or a personal piece of someone’s story.
+                For me, pencil art is personal. A portrait can represent love, memory,
+                admiration, identity, or a story that words cannot fully explain. Whether it is
+                a famous character, a family bond, or a meaningful face, I try to turn each
+                drawing into something emotional, valuable, and lasting.
               </p>
             </div>
           </div>
