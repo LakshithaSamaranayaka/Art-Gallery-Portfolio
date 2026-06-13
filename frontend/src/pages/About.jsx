@@ -46,10 +46,11 @@ function About() {
             className="w-full h-[360px] object-cover object-[center_35%] rounded-[1.5rem]"
        />
      </div> */}
-
-  <h2 className="mt-1 text-3xl font-display text-cream leading-tight text-center">
-    " Lakshitha  Samaranayaka "
+<div className="-mt-5 w-full">
+  <h2 className="text-2xl font-display text-cream leading-tight text-left">
+     Lakshitha  Samaranayaka 
     </h2>
+    </div>
      </div>
 
             <h2 className="text-4xl md:text-5xl font-display leading-tight">
