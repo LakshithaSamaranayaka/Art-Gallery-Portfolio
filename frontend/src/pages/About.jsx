@@ -39,13 +39,13 @@ function About() {
           </div>
             {/* Mobile Only Profile Image */}
       <div className="md:hidden mt-8 mb-10 flex flex-col items-center">
-        <div className="rounded-[2rem] p-3 border border-gold/20 bg-black/30 w-full max-w-[420px]">
+        {/* <div className="rounded-[2rem] p-3 border border-gold/20 bg-black/30 w-full max-w-[420px]">
            <img
             src={Image}
             alt="Lakshitha Samaranayaka"
             className="w-full h-[360px] object-cover object-[center_35%] rounded-[1.5rem]"
        />
-     </div>
+     </div> */}
 
   <h2 className="mt-1 text-3xl font-display text-cream leading-tight text-center">
     " Lakshitha  Samaranayaka "
