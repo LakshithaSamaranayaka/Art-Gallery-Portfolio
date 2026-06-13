@@ -33,9 +33,9 @@ function Home() {
             <p className="text-gold uppercase tracking-[0.4em] text-sm mb-4">
               Welcome to Graphite Noir
             </p>
-            <p className="text-gold uppercase tracking-[0.4em] text-sm mb-4">
+            {/* <p className="text-gold uppercase tracking-[0.4em] text-sm mb-4">
               Noir Graphite Collection
-            </p>
+            </p> */}
 
             <h1 className="text-5xl md:text-7xl font-display leading-tight">
               Where Shadows <br />
