@@ -1,4 +1,5 @@
 Graphite Noir — Pencil Art Portfolio Website
+
 ![image alt](https://github.com/LakshithaSamaranayaka/Art-Gallery-Portfolio/blob/b79bf1aa6103808856359bc77bc6d698368cb4fd/frontend/public/homepage.png)
 
 Graphite Noir is a premium pencil art portfolio website created to showcase my own graphite drawings in a professional and visually elegant way. The website presents realistic portraits, cinematic sketches, character-inspired artworks, and emotional pencil drawings with a dark luxury user interface.
