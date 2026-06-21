@@ -9,7 +9,8 @@ function Gallery() {
   useEffect(() => {
     const fetchArtworks = async () => {
       try {
-        const res = await axios.get("https://art-gallery-portfolio-634e.vercel.app/api/artworks");
+        const baseUrl = import.meta.env.VITE_API_URL || "";
+        const res = await axios.get(`${baseUrl}api/artworks`);
         setArtworks(res.data);
       } catch (error) {
         console.log(error);
