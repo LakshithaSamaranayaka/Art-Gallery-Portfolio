@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import aboutImg from "../assets/about.jpg";
 import { motion } from "framer-motion";
 
+const heroVideo = "/graphite1-bg.mp4";
+
 function Home() {
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -19,9 +21,20 @@ function Home() {
   };
 
   return (
-    <main className="pt-28">
-      <section className="min-h-screen flex items-center">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <main className="pt-8">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+  <video
+    src={heroVideo}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover object-center opacity-60 "
+  />
+
+    <div className="absolute inset-0 z-[1] bg-black/0"></div>
+    <div className="absolute inset-0 z-[2] bg-gradient-to-b from-black/10 via-black/20 to-[#090604]"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial="hidden"
             animate="show"
