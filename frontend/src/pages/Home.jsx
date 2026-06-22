@@ -34,7 +34,7 @@ function Home() {
 
     <div className="absolute inset-0 z-[1] bg-black/0"></div>
     <div className="absolute inset-0 z-[2] bg-gradient-to-b from-black/10 via-black/20 to-[#090604]"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-16 md:pt-0 grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial="hidden"
             animate="show"

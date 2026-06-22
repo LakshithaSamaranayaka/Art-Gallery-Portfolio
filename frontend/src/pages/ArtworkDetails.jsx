@@ -76,14 +76,14 @@ function ArtworkDetails() {
               </div>
             </div>
 
-            <a
+            {/* <a
               href={artwork.imageUrl}
               target="_blank"
               rel="noreferrer"
               className="mt-8 inline-block bg-gold text-black px-8 py-3 rounded-full font-bold hover:bg-cream transition"
             >
               View Full Image
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
