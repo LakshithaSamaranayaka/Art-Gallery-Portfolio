@@ -21,7 +21,7 @@ function Home() {
   };
 
   return (
-    <main className="pt-8">
+    <main className="pt-10">
       <section className="relative min-h-screen flex items-center overflow-hidden">
   <video
     src={heroVideo}
