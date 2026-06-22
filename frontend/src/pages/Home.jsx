@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import aboutImg from "../assets/about.jpg";
 import { motion } from "framer-motion";
 
-const heroVideo = "/graphite1-bg.mp4";
+const heroVideo = "/graphite4-bg.mp4";
 
 function Home() {
   const fadeUp = {
