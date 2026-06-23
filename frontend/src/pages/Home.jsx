@@ -46,10 +46,7 @@ function Home() {
             <p className="text-gold uppercase tracking-[0.4em] text-sm mb-4">
               Welcome to Graphite Noir
             </p>
-            {/* <p className="text-gold uppercase tracking-[0.4em] text-sm mb-4">
-              Noir Graphite Collection
-            </p> */}
-
+    
             <h1 className="text-5xl md:text-7xl font-display leading-tight">
               Where Shadows <br />
               Became Art
@@ -141,7 +138,7 @@ function Home() {
         className="group glass-card rounded-[3rem] p-5 cursor-pointer"
         >
     <img
-    src="https://i.ibb.co/RkxdtmQG/IMG-1273.jpg"
+    src="https://i.imgur.com/kqY2WnY.jpeg"
     alt="Art workspace"
     className="w-full h-[360px] md:h-[520px] object-cover object-center rounded-[2rem] transition-transform duration-700 group-hover:scale-110"
   />
