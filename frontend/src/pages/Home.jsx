@@ -98,18 +98,17 @@ function Home() {
       <section className="py-24 bg-[#090604]">
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
     <motion.div
-      initial={{ opacity: 0, x: -60, rotate: -2 }}
-      animate={{ opacity: 1, x: 0, rotate: -2 }}
-      variants={fadeLeft}
-      whileInView="show"
+      initial={{ opacity: 0, x: -60, rotate: -4 }}
+      whileInView={{ opacity: 1 , x: 0, rotate: -4 }}
+      whileHover={{ rotate:0, scale: 1.05, y: -10}}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="hidden md:block glass-card rounded-[3rem] p-5 -rotate-2"
+      className="hidden md:block glass-card rounded-[3rem] p-5"
     >
       <img
         src={aboutImg}
         alt="Artist workspace"
-        className="rounded-[2rem] w-full h-[520px] object-cover"
+        className="rounded-[2rem] w-full h-[520px] object-cover transition-all duration-500 hover:bg-gold/60 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_80px_rgba(229,178,91,0.5)]"
       />
     </motion.div>
 
@@ -124,20 +123,29 @@ function Home() {
       <p className="text-gold uppercase tracking-[0.4em] text-sm mb-4">
         About Me
       </p>
-      <div className="md:hidden mt-6 mb-8">
+      <div className="md:hidden mt-6 mb-8 ">
         <motion.div
-          initial="hidden"
-          variants={fadeUp}
-          whileInView="show"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="glass-card rounded-[2rem] p-3 -rotate-2">
-          <img
-            src={aboutImg}
-            alt="Artist workspace"
-            className="rounded-[1.5rem] w-full h-[360px] object-cover object-center"
-          />
-        </motion.div>
+         initial={{ opacity: 0, x: 60, rotate: 2 }}
+         animate={{ opacity: 1, x: 0, rotate: 2 }}
+         whileInView={{ opacity: 1, x: 0, rotate: 2 }}
+         whileHover={{
+          scale: 1.04,
+          rotate: 0,
+          y: -10,
+  }}
+         whileTap={{
+           scale: 0.98,
+  }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="group glass-card rounded-[3rem] p-5 cursor-pointer"
+        >
+    <img
+    src="https://i.ibb.co/RkxdtmQG/IMG-1273.jpg"
+    alt="Art workspace"
+    className="w-full h-[360px] md:h-[520px] object-cover object-center rounded-[2rem] transition-transform duration-700 group-hover:scale-110"
+  />
+</motion.div>
       </div>
       <h2 className="text-4xl md:text-6xl font-display leading-tight">
         Lakshitha <br />
@@ -157,17 +165,17 @@ function Home() {
       </p>
 
       <div className="mt-8 grid grid-cols-3 gap-4">
-        <div className="glass-card rounded-2xl p-5 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500">
+        <div className="glass-card rounded-2xl p-5 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
           <h3 className="text-3xl font-display text-gold">20+</h3>
           <p className="text-cream/60 text-sm mt-1">Artworks</p>
         </div>
 
-        <div className="glass-card rounded-2xl p-5 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500">
+        <div className="glass-card rounded-2xl p-5 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
           <h3 className="text-3xl font-display text-gold">3+</h3>
           <p className="text-cream/60 text-sm mt-1">Styles</p>
         </div>
 
-        <div className="glass-card rounded-2xl p-5 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500">
+        <div className="glass-card rounded-2xl p-5 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
           <h3 className="text-3xl font-display text-gold">2026</h3>
           <p className="text-cream/60 text-sm mt-1">Portfolio</p>
         </div>
@@ -177,7 +185,7 @@ function Home() {
 </section>
 
       <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 ">
           <motion.div 
           initial="hidden"
           animate="show"
@@ -185,7 +193,7 @@ function Home() {
           whileInView="show"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="glass-card p-8 rounded-3xl hover:-translate-y-2 hover:scale-[1.05] transition-all duration-500">
+          className="glass-card p-8 rounded-3xl hover:-translate-y-2 hover:scale-[1.05] transition-all duration-500 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
             <h3 className="text-2xl font-display text-gold">Realistic Sketches</h3>
             <p className="text-cream/70 mt-3">
               Detailed pencil artworks with strong shading and emotional expression.
@@ -199,7 +207,7 @@ function Home() {
           whileInView="show"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="glass-card p-8 rounded-3xl hover:-translate-y-2 hover:scale-[1.05] transition-all duration-500">
+          className="glass-card p-8 rounded-3xl hover:-translate-y-2 hover:scale-[1.05] transition-all duration-500 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
             <h3 className="text-2xl font-display text-gold">Movie Inspired</h3>
             <p className="text-cream/70 mt-3">
               Famous cinematic scenes and character portraits in pencil style.
@@ -213,10 +221,10 @@ function Home() {
           whileInView="show"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="glass-card p-8 rounded-3xl hover:-translate-y-2 hover:scale-[1.05] transition-all duration-500">
+          className="glass-card p-8 rounded-3xl hover:-translate-y-2 hover:scale-[1.05] transition-all duration-500 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
             <h3 className="text-2xl font-display text-gold">Graphite Collection</h3>
             <p className="text-cream/70 mt-3">
-              A curated selection of realistic portraits, cinematic sketches, and emotional pencil artworks.
+              A curated selection of realistic portraits, cinematic sketches, emotional pencil artworks.
             </p>
           </motion.div>
         </div>

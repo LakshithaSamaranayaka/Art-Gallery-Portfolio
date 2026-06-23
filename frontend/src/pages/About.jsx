@@ -10,7 +10,7 @@ function About() {
             About Graphite Noir
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-display leading-tight">
+          <h1 className="text-5xl md:text-6xl font-display leading-tight">
             Art is not just drawn. <br />
             It is felt.
           </h1>
@@ -23,10 +23,10 @@ function About() {
         </div>
       </section>
 
-      {/* About Me */}
+      
       <section className="max-w-7xl mx-auto px-6 pb-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="glass-card rounded-[3rem] p-8 md:p-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-center ">
+          <div className="glass-card rounded-[3rem] p-8 md:p-12 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
             <p className="text-gold uppercase tracking-[0.35em] text-sm mb-4">
               The Artist
             </p>
@@ -53,7 +53,7 @@ function About() {
     </div>
      </div>
 
-            <h2 className="text-4xl md:text-5xl font-display leading-tight">
+            <h2 className="text-3xl md:text-3xl font-display leading-tight">
               I turn silence, shadow, and emotion into pencil art.
             </h2>
 
@@ -72,7 +72,7 @@ function About() {
           </div>
 
           <div className="grid gap-6">
-            <div className="glass-card rounded-[2rem] p-7">
+            <div className="glass-card rounded-[2rem] p-7 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
               <h3 className="text-2xl font-display text-gold">
                 Realistic Detail
               </h3>
@@ -84,7 +84,7 @@ function About() {
               </p>
             </div>
 
-            <div className="glass-card rounded-[2rem] p-7">
+            <div className="glass-card rounded-[2rem] p-7 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
               <h3 className="text-2xl font-display text-gold">
                 Cinematic Emotion
               </h3>
@@ -96,7 +96,7 @@ function About() {
               </p>
             </div>
 
-            <div className="glass-card rounded-[2rem] p-7">
+            <div className="glass-card rounded-[2rem] p-7 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
               <h3 className="text-2xl font-display text-gold">
                 Personal Meaning
               </h3>
