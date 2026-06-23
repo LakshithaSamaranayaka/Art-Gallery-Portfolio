@@ -120,6 +120,8 @@ function Home() {
       <p className="text-gold uppercase tracking-[0.4em] text-sm mb-4">
         About Me
       </p>
+
+      
       <div className="md:hidden mt-6 mb-8 ">
         <motion.div
          initial={{ opacity: 0, x: 60, rotate: 2 }}
@@ -140,8 +142,10 @@ function Home() {
     <img
     src="https://i.imgur.com/kqY2WnY.jpeg"
     alt="Art workspace"
-    className="w-full h-[360px] md:h-[520px] object-cover object-center rounded-[2rem] transition-transform duration-700 group-hover:scale-110"
+    className="rounded-[2rem] w-full h-[520px] object-cover transition-all duration-500 hover:bg-gold/60 transition-all duration-500 ease-out hover:scale-100 hover:-translate-y-2 hover:shadow-[0_0_80px_rgba(229,178,91,0.5)]"
   />
+
+
 </motion.div>
       </div>
       <h2 className="text-4xl md:text-6xl font-display leading-tight">
