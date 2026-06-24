@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-route-dom";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -131,7 +132,7 @@ ${formData.message}`;
         Premium Experience
       </p>
 
-      <h3 className="text-3xl font-display text-cream">
+      <h3 className="text-2xl font-display text-cream">
         Open Graphite Noir in Your Browser
       </h3>
 
@@ -146,6 +147,15 @@ ${formData.message}`;
         <span className="text-gold text-sm tracking-widest uppercase">
           Recommended
         </span>
+        <div className="mt-8">
+  <Link
+    to="/"
+    className="inline-flex items-center gap-3 text-gold hover:text-cream transition-all duration-500 group"
+  >
+    <span className="w-10 h-[1px] bg-gold group-hover:w-16 transition-all duration-500"></span>
+    Return to Home
+  </Link>
+</div>
       </div>
     </div>
   </div>
