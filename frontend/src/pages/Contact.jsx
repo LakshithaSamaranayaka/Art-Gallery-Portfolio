@@ -122,19 +122,30 @@ ${formData.message}`;
           </form>
 
            {isInstagramBrowser && (
-          <div className="mb-8 bg-gradient-to-r from-gold/10 to-gold/5 border border-gold/20 rounded-3xl p-5">
-            <div className="flex items-center gap-3">
-                <span className="text-2xl">📱</span>
-          <div>
-              <h3 className="text-gold font-bold text-2xl">
-                Instagram Browser Detected
-              </h3>
+  <div className="mt-8 relative overflow-hidden rounded-[2rem] border border-gold/20 bg-gradient-to-br from-[#1b1511] to-[#0f0b08] p-8">
+    
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]"></div>
 
-              <p className="text-cream/70 mt-1">
-                 SMS requests may not work inside Instagram. For the best experience,
-                 tap <strong>•••</strong> in the top-right corner and select
-          <strong> Open in Browser</strong>.
-        </p>
+    <div className="relative z-10">
+      <p className="text-gold uppercase tracking-[0.35em] text-xs mb-3">
+        Premium Experience
+      </p>
+
+      <h3 className="text-3xl font-display text-cream">
+        Open Graphite Noir in Your Browser
+      </h3>
+
+      <p className="text-cream/70 mt-4 leading-8 max-w-xl">
+        Instagram's built-in browser may limit certain features.
+        For the complete Graphite Noir experience, Go to Home & open this portfolio
+        in Safari or Chrome.
+      </p>
+
+      <div className="mt-6 flex items-center gap-3">
+        <div className="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
+        <span className="text-gold text-sm tracking-widest uppercase">
+          Recommended
+        </span>
       </div>
     </div>
   </div>
