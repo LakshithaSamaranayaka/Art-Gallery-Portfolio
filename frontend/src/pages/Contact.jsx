@@ -72,7 +72,7 @@ ${formData.message}`;
   };
 
   return (
-    <main className="pt-30 md:pt-40 pb-20 min-h-screen">
+    <main className="pt-32 md:pt-40 pb-20 min-h-screen">
       <section className="max-w-4xl mx-auto px-6">
         <div className="glass-card rounded-[3rem] p-10 md:p-16">
           <p className="text-gold uppercase tracking-[0.4em] text-sm">
