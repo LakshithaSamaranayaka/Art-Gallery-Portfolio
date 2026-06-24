@@ -127,38 +127,35 @@ ${formData.message}`;
     
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]"></div>
 
-    <div className="relative z-10">
-      <p className="text-gold uppercase tracking-[0.35em] text-xs mb-3">
-        Premium Experience
-      </p>
 
-      <h3 className="text-2xl font-display text-cream">
+      <h3 className="text-2xl md:text-4xl font-display text-cream leading-tight">
         Open Graphite Noir in Your Browser
       </h3>
 
-      <p className="text-cream/70 mt-4 leading-8 max-w-xl">
+      <p className="text-cream/70 mt-4 text-sm md:text-lg leading-7 max-w-xl">
         Instagram's built-in browser may limit certain features.
         For the complete Graphite Noir experience, Go to Home & open this portfolio
         in Safari or Chrome.
       </p>
 
-      <div className="mt-6 flex items-center gap-3">
-        <div className="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
-        <span className="text-gold text-sm tracking-widest uppercase">
-          Recommended
-        </span>
-        <div className="mt-8">
+<div className="mt-8 flex flex-col gap-4">
+  <div className="flex items-center gap-3">
+    <div className="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
+
+    <span className="text-gold text-xs tracking-[0.25em] uppercase">
+      Recommended
+    </span>
+  </div>
+
   <Link
     to="/"
-    className="inline-flex items-center gap-3 text-gold hover:text-cream transition-all duration-500 group"
+    className="w-full text-center border border-gold/40 text-gold px-6 py-3 rounded-full hover:bg-gold hover:text-black transition-all duration-500"
   >
-    <span className="w-10 h-[1px] bg-gold group-hover:w-16 transition-all duration-500"></span>
-    Return to Home
+    ← Return Home
   </Link>
 </div>
-      </div>
     </div>
-  </div>
+  
 )}
 
 
