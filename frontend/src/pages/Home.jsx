@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import aboutImg from "../assets/about.jpg";
 import { motion } from "framer-motion";
+import {useState } from "react";
+import IntroSplash from "../components/IntroSplash";
 
 const heroVideo = "/graphite4-bg.mp4";
 
@@ -20,7 +22,19 @@ function Home() {
     show: { opacity: 1, x: 0 },
   };
 
+  const [showIntro, setShowIntro] = useState(() => {
+    return sessionStorage.getItem("graphiteIntroSeen") !=="true";
+  });
+
   return (
+    <> 
+      <IntroSplash
+        show={showIntro}
+        onFinish={() => {
+          sessionStorage.setItem("graphiteIntroSeen", "true");
+          setShowIntro(false)
+        }}    
+      />
     <main className="pt-10">
       <section className="relative min-h-screen flex items-center overflow-hidden">
   <video
@@ -231,6 +245,7 @@ function Home() {
         </div>
       </section>
     </main>
+    </>
   );
 }
 
