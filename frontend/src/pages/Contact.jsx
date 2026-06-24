@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -7,7 +7,7 @@ function Contact() {
     phone: "",
     message: "",
   });
-  const navigate = useNavigate();
+
   const isInstagramBrowser =
           /Instagram/i.test(navigator.userAgent);
   const [desktopFallback, setDesktopFallback] = useState(false);
@@ -148,13 +148,13 @@ ${formData.message}`;
     </span>
   </div>
 
-  <button
-    type="button"
-    onClick={() => navigate("/")}
-    className="w-full text-center border border-gold/40 text-gold px-6 py-3 rounded-full hover:bg-gold hover:text-black transition-all duration-500"
+  <Link
+  to="/"
+  className="block w-full text-center border border-gold/40 text-gold px-6 py-3 rounded-full hover:bg-gold hover:text-black transition-all duration-500"
 >
   ← Return Home
-</button>
+</Link>
+
 </div>
     </div>
   
