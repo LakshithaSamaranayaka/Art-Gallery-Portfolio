@@ -147,15 +147,12 @@ ${formData.message}`;
     </span>
   </div>
 
- <div className="mt-8">
-  <Link
-    to="/"
-    className="inline-flex items-center gap-3 text-gold hover:text-cream transition-all duration-500 group"
-  >
-    <span className="w-10 h-[1px] bg-gold group-hover:w-16 transition-all duration-500"></span>
-    Return to Home
-  </Link>
-</div>
+  <button
+  onClick={() => window.location.href = "/"}
+  className="w-full text-center border border-gold/40 text-gold px-6 py-3 rounded-full hover:bg-gold hover:text-black transition-all duration-500"
+>
+  ← Return Home
+</button>
 </div>
     </div>
   
