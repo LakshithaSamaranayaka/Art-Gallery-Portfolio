@@ -124,20 +124,28 @@ ${formData.message}`;
           </form>
 
            {isInstagramBrowser && (
-  <div className="mt-8 relative overflow-hidden rounded-[2rem] border border-gold/20 bg-gradient-to-br from-[#1b1511] to-[#0f0b08] p-8">
-    
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]"></div>
 
+<div className="mt-8 relative overflow-hidden rounded-[2rem] border border-gold/20 bg-gradient-to-br from-[#1b1511] to-[#0f0b08] p-8">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]"></div>
+  <div className="relative z-10">
+    <h3 className="text-2xl md:text-4xl font-display text-cream leading-tight">
+      Open Graphite Noir in Your Browser
+    </h3>
 
-      <h3 className="text-2xl md:text-4xl font-display text-cream leading-tight">
-        Open Graphite Noir in Your Browser
-      </h3>
-
-      <p className="text-cream/70 mt-4 text-sm md:text-lg leading-7 max-w-xl">
-        Instagram's built-in browser may limit certain features.
+    <p className="text-cream/70 mt-4">
+      Instagram's built-in browser may limit certain features.
         For the complete Graphite Noir experience, Go to Home & open this portfolio
         in Safari or Chrome.
-      </p>
+    </p>
+
+    <div className="mt-8 flex flex-col gap-4">
+  <div className="flex items-center gap-3">
+    <div className="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
+
+    <span className="text-gold text-xs tracking-[0.25em] uppercase">
+      Recommended
+    </span>
+  </div>
 
     <Link
       to="/"
@@ -147,6 +155,8 @@ ${formData.message}`;
     </Link>
 
   </div>
+</div>
+</div>   
   
 )}
 
