@@ -38,7 +38,7 @@ function ArtworkDetails() {
         </Link>
 
         <div className="grid lg:grid-cols-2 gap-10 mt-8 items-start">
-          <div className="glass-card rounded-[2rem] p-4">
+          <div className="glass-card rounded-[2rem] p-4 mb-20">
             <img
               src={artwork.imageUrl}
               alt={artwork.title}

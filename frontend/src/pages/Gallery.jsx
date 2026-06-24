@@ -52,10 +52,10 @@ function Gallery() {
 
         {filteredArtworks.length === 0 ? (
           <p className="text-center text-cream/60">
-            No artworks found. Upload artworks from admin page.
+            Loading Artworks...
           </p>
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
             {filteredArtworks.map((artwork) => (
               <ArtworkCard key={artwork._id} artwork={artwork} />
             ))}
