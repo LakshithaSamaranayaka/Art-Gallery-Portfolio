@@ -148,7 +148,7 @@ ${formData.message}`;
   </div>
 
   <Link
-    to="/"
+    to="/home"
     className="w-full text-center border border-gold/40 text-gold px-6 py-3 rounded-full hover:bg-gold hover:text-black transition-all duration-500"
   >
     ← Return Home
