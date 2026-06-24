@@ -139,20 +139,6 @@ ${formData.message}`;
         in Safari or Chrome.
       </p>
 
-<div className="mt-8 relative overflow-hidden rounded-[2rem] border border-gold/20 bg-gradient-to-br from-[#1b1511] to-[#0f0b08] p-8">
-
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]"></div>
-
-  <div className="relative z-10">
-
-    <h3 className="text-2xl md:text-4xl font-display text-cream leading-tight">
-      Open Graphite Noir in Your Browser
-    </h3>
-
-    <p className="text-cream/70 mt-4">
-      ...
-    </p>
-
     <Link
       to="/"
       className="block mt-6 w-full text-center border border-gold/40 text-gold px-6 py-3 rounded-full"
@@ -161,8 +147,6 @@ ${formData.message}`;
     </Link>
 
   </div>
-</div>
-    </div>
   
 )}
 
