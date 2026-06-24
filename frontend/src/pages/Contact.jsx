@@ -6,13 +6,14 @@ function Contact() {
     phone: "",
     message: "",
   });
-
+  const isInstagramBrowser =
+          /Instagram/i.test(navigator.userAgent);
   const [desktopFallback, setDesktopFallback] = useState(false);
   const [copied, setCopied] = useState(false);
   const myPhoneNumber = "+94742859116";
   const myEmail = "samaranayakal95@gmail.com";
   const createMessage = () => {
-    return `Hello, I want to request an artwork.
+    return `Hello, I Like Your artworks.
 
 Name: ${formData.name}
 Phone Number: ${formData.phone}
@@ -47,7 +48,7 @@ ${formData.message}`;
         ? `sms:${myPhoneNumber}&body=${encodeURIComponent(smsMessage)}`
         : `sms:${myPhoneNumber}?body=${encodeURIComponent(smsMessage)}`;
 
-      window.location.href = smsURL;
+      window.open(smsURL, "_self");
     } else {
       setDesktopFallback(true);
     }
@@ -75,6 +76,24 @@ ${formData.message}`;
     <main className="pt-32 md:pt-40 pb-20 min-h-screen">
       <section className="max-w-4xl mx-auto px-6">
         <div className="glass-card rounded-[3rem] p-10 md:p-16">
+                  {isInstagramBrowser && (
+          <div className="mb-8 bg-gradient-to-r from-gold/10 to-gold/5 border border-gold/20 rounded-3xl p-5">
+            <div className="flex items-center gap-3">
+                <span className="text-2xl">📱</span>
+      <div>
+        <h3 className="text-gold font-bold text-lg">
+          Instagram Browser Detected
+        </h3>
+
+        <p className="text-cream/70 mt-1">
+          SMS requests may not work inside Instagram. For the best experience,
+          tap <strong>•••</strong> in the top-right corner and select
+          <strong> Open in Browser</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+)}
           <p className="text-gold uppercase tracking-[0.4em] text-sm">
             Contact
           </p>
