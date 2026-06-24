@@ -31,7 +31,7 @@ function IntroSplash({ show, onFinish }) {
             transition={{ duration: fadeUpTime, ease: "easeOut" }}
             className="text-center px-6"
           >
-            <h1 className="text-gold font-display text-4xl md:text-7xl leading-tight">
+            <h1 className="text-gold font-display text-2xl md:text-5xl leading-tight">
               Welcome to Graphite Noir
             </h1>
 
