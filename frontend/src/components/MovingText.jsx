@@ -1,15 +1,15 @@
 function MovingText() {
   return (
-    <section className="relative overflow-hidden h-40 flex items-center">
+    <section className="relative overflow-hidden h-15 flex items-center">
 
       {/* Glow */}
-<div className="absolute inset-0 flex items-center justify-center">
+{/* <div className="absolute inset-0 flex items-center justify-center">
 
-  {/* <div className="absolute w-[900px] h-4 rounded-full bg-gold/35 blur-[90px]"></div> */}
+  <div className="absolute w-[900px] h-4 rounded-full bg-gold/20 blur-[90px]"></div>
 
-  {/* <div className="absolute w-[500px] h-24 rounded-full bg-[#FFD875]/35 blur-[70px]"></div> */}
+  <div className="absolute w-[500px] h-24 rounded-full bg-[#FFD875]/20 blur-[70px]"></div>
 
-</div> 
+</div>  */}
       <div className="marquee">
         
 
@@ -23,8 +23,8 @@ function MovingText() {
 
       </div>
           
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-[#0b0b0b] to-transparent"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-[#0b0b0b] to-transparent"></div>
+          {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-[#0b0b0b] to-transparent"></div> */}
+          {/* <div className="pointer-events-none absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-[#0b0b0b] to-transparent"></div> */}
     </section>
   );
 }
