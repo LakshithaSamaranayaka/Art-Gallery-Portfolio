@@ -44,6 +44,8 @@ body {
 
     text-transform:uppercase;
 
+    color: transparent;
+
     color:rgb(255,216,117,.12);
 
     -webkit-text-stroke:1.5px rgba(255,216,117,.65);
