@@ -1,10 +1,45 @@
 import { Link } from "react-router-dom";
 import aboutImg from "../assets/about.jpg";
-import { motion } from "framer-motion";
-import {useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import IntroSplash from "../components/IntroSplash";
+import ProcessTimeline from "../components/ProcessTimeline";
+import MovingText from "../components/MovingText";
 
 const heroVideo = "/graphite4-bg.mp4";
+
+function AnimatedStat({ end, duration = 2, suffix = "" }) {
+  const [value, setValue] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, {  amount: 0.6 });
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    let frameId;
+    const startTime = performance.now();
+
+    const step = (timestamp) => {
+      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
+      setValue(Math.round(end * progress));
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(step);
+      }
+    };
+
+    frameId = requestAnimationFrame(step);
+
+    return () => cancelAnimationFrame(frameId);
+  }, [isInView, end, duration]);
+
+  return (
+    <span ref={ref}>
+      {value}
+      {suffix}
+    </span>
+  );
+}
 
 function Home() {
   const fadeUp = {
@@ -95,16 +130,18 @@ function Home() {
             whileInView={{ opacity: 1, x: 0, rotate: 2}}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="glass-card rounded-[3rem] p-5"
+            className="glass-card rounded-[3rem] p-5 mt-10"
           >
             <img
               src="https://i.ibb.co/RkxdtmQG/IMG-1273.jpg"
               alt="Art workspace"
-              className="w-full h-[360px] md:h-[520px] object-cover object-center rounded-[2rem]"
+              className="w-full h-[350px] md:h-[510px] object-cover object-center rounded-[2rem]"
             />
           </motion.div>
         </div>
       </section>
+
+      <ProcessTimeline/>
 
       <section className="py-24 bg-[#090604]">
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
@@ -181,23 +218,31 @@ function Home() {
 
       <div className="mt-8 grid grid-cols-3 gap-4">
         <div className="glass-card rounded-2xl p-5 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
-          <h3 className="text-3xl font-display text-gold">20+</h3>
+          <h3 className="text-3xl font-display text-gold">
+            <AnimatedStat end={20} duration={2} suffix="+" />
+          </h3>
           <p className="text-cream/60 text-sm mt-1">Artworks</p>
         </div>
 
         <div className="glass-card rounded-2xl p-5 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
-          <h3 className="text-3xl font-display text-gold">3+</h3>
+          <h3 className="text-3xl font-display text-gold">
+            <AnimatedStat end={3} duration={2} suffix="+" />
+          </h3>
           <p className="text-cream/60 text-sm mt-1">Styles</p>
         </div>
 
         <div className="glass-card rounded-2xl p-5 text-center hover:-translate-y-2 hover:scale-105 transition-all duration-500 hover:bg-gold/20 transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(229,178,91,0.5)]">
-          <h3 className="text-3xl font-display text-gold">2026</h3>
+          <h3 className="text-3xl font-display text-gold">
+            <AnimatedStat end={2026} duration={2.5} />
+          </h3>
           <p className="text-cream/60 text-sm mt-1">Portfolio</p>
         </div>
       </div>
     </motion.div>
   </div>
 </section>
+
+<MovingText/>
 
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid md:grid-cols-3 gap-6 ">

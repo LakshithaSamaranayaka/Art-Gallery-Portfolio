@@ -19,3 +19,54 @@ body {
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
+
+
+.marquee{
+    display:flex;
+    width:max-content;
+    animation:marqueeLuxury 70s linear infinite;
+}
+
+
+
+.marquee-content{
+    white-space:nowrap;
+
+    padding-right:120px;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:clamp(4rem,10vw,8rem);
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:rgb(255,216,117,.12);
+
+    -webkit-text-stroke:1.5px rgba(255,216,117,.65);
+
+    text-shadow: 
+            0 0 8px rgba(255,216,117,.15),
+            0 0 18px rgba(255,216,117,.12);
+
+    opacity:.6;
+
+    user-select:none;
+}
+
+
+
+@keyframes marqueeLuxury{
+
+    from{
+        transform:translateX(0%);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
