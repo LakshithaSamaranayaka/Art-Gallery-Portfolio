@@ -36,8 +36,15 @@ function AdminUpload() {
     return;
   }
 
+  // Client-side validation for required fields
+  if (!formData.title.trim() || !formData.imageUrl.trim() || !formData.category.trim()) {
+    alert("Please provide Title, Category and Image URL before uploading.");
+    return;
+  }
+
   try {
-    await axios.post("https://art-gallery-portfolio-634e.vercel.app/api/artworks",
+    const res = await axios.post(
+      "https://art-gallery-portfolio-634e.vercel.app/api/artworks",
       formData,
       {
         headers: {
@@ -57,8 +64,19 @@ function AdminUpload() {
       medium: "Pencil Drawing",
     });
   } catch (error) {
-    console.log("Upload error:", error.response?.data || error.message);
-    alert(error.response?.data?.message || "Failed to upload artwork");
+    // Log full response for debugging
+    console.log("Upload error response:", error.response?.data || error.message);
+
+    const resp = error.response?.data;
+    const message = resp?.message || error.message || "Failed to upload artwork";
+
+    // If Mongoose validation errors exist, join their messages
+    let details = "";
+    if (resp?.errors) {
+      details = Object.values(resp.errors).map((e) => e.message).join("; ");
+    }
+
+    alert(message + (details ? `: ${details}` : ""));
   }
 };
 

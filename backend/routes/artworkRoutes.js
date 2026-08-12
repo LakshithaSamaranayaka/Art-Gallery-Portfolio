@@ -32,10 +32,12 @@ router.get("/:id", async (req, res) => {
 // Create artwork
 router.post("/", protectAdmin, async (req, res) => {
   try {
+    console.log("Create artwork payload:", req.body);
     const artwork = await Artwork.create(req.body);
     res.status(201).json(artwork);
   } catch (error) {
-    res.status(400).json({ message: "Failed to create artwork" });
+    console.error("Create artwork error:", error);
+    res.status(400).json({ message: error.message, errors: error.errors });
   }
 });
 
